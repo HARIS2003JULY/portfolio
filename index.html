@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name - web developer building fast, accessible, responsive websites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Apply saved theme before paint to avoid flash
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">&lt;HARIS KHURSHEED/&gt;</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark / light theme" title="Toggle theme">
+          <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+        </button>
+        <button id="hamburger" class="icon-btn hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>HARIS KHURSHEED<span class="accent">.</span></h1>
+          <h2 class="typing">I build <span id="typed" class="accent"></span><span class="cursor">|</span></h2>
+          <p class="lead">
+            Computer Science student and web developer focused on creating fast, accessible and
+            beautiful web experiences with modern HTML, CSS and JavaScript.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
+          </div>
+          <ul class="socials" aria-label="Social links">
+            <li><a href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="mailto:you@example.com" aria-label="Email">Email</a></li>
+          </ul>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="avatar">
+            <span>YN</span>
+          </div>
+          <div class="code-card">
+            <p><span class="c-k">const</span> developer = {</p>
+            <p>&nbsp;&nbsp;name: <span class="c-s">"Your Name"</span>,</p>
+            <p>&nbsp;&nbsp;stack: [<span class="c-s">"HTML"</span>, <span class="c-s">"CSS"</span>, <span class="c-s">"JS"</span>],</p>
+            <p>&nbsp;&nbsp;coffee: <span class="c-k">true</span></p>
+            <p>};</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a passionate developer who enjoys turning ideas into clean, working products.
+              I started programming out of curiosity and now spend my time building responsive
+              websites, learning new tools and solving real problems with code.
+            </p>
+            <p>
+              When I'm not coding, I'm exploring open-source projects, reading about web
+              performance, or sharpening my problem-solving skills.
+            </p>
+            <ul class="stats">
+              <li><strong>10+</strong><span>Projects built</span></li>
+              <li><strong>2+</strong><span>Years learning</span></li>
+              <li><strong>5+</strong><span>Technologies</span></li>
+            </ul>
+          </div>
+
+          <div class="resume-card reveal">
+            <h3>Resume Credentials</h3>
+            <div class="timeline">
+              <div class="t-item">
+                <span class="t-date">2022 – Present</span>
+                <h4>BS Computer Science</h4>
+                <p>Your University Name</p>
+              </div>
+              <div class="t-item">
+                <span class="t-date">2024</span>
+                <h4>Web Development Intern</h4>
+                <p>Company / Organization Name</p>
+              </div>
+              <div class="t-item">
+                <span class="t-date">2023</span>
+                <h4>Certification: Responsive Web Design</h4>
+                <p>freeCodeCamp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Tech Stack <span class="accent">&amp; Skills</span></h2>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+        <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h2 class="section-title left">Get In <span class="accent">Touch</span></h2>
+          <p class="lead">
+            Have a project, an internship opportunity or just want to say hi?
+            My inbox is always open.
+          </p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:hariskhursheed2003@gmail.com">hariskhursheed2003@gmail.com</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/HARIS2003JULY?tab=repositories" target="_blank" rel="noopener">https://github.com/HARIS2003JULY?tab=repositories</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/haris-khursheed-28343226b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">https://www.linkedin.com/in/haris-khursheed-28343226b?utm_source=share_via&utm_content=profile&utm_medium=member_android</a></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal" novalidate>
+          <label>Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>Email
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>Message
+            <textarea name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </label>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Close dialog">&times;</button>
+      <div class="modal-banner" id="modal-banner"></div>
+      <div class="modal-body">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <h4>Key features</h4>
+        <ul id="modal-features"></ul>
+        <h4>Built with</h4>
+        <div class="tags" id="modal-tags"></div>
+        <div class="modal-links">
+          <a id="modal-live" class="btn btn-primary" target="_blank" rel="noopener">Live Demo</a>
+          <a id="modal-code" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
